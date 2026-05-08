@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:isango_app/screens/auth/sign_in_screen.dart';
 import 'package:isango_app/screens/auth/sign_up_screen.dart';
+import 'package:isango_app/screens/auth/verify_email_screen.dart';
+import 'package:isango_app/screens/event_detail/event_detail_screen.dart';
 import 'package:isango_app/screens/home/home_screen.dart';
+import 'package:isango_app/screens/profile/profile_screen.dart';
 import 'package:isango_app/screens/saved/saved_screen.dart';
 import 'package:isango_app/screens/settings/settings_screen.dart';
 import 'package:isango_app/screens/submit/submit_screen.dart';
@@ -22,10 +25,13 @@ class IsangoApp extends StatelessWidget {
       routes: {
         AppRoutes.login: (context) => const SignInScreen(),
         AppRoutes.signUp: (context) => const SignUpScreen(),
+        AppRoutes.verifyEmail: (context) => const VerifyEmailScreen(),
         AppRoutes.home: (context) => const HomeScreen(),
         AppRoutes.saved: (context) => const SavedScreen(),
         AppRoutes.submitEvent: (context) => const SubmitScreen(),
         AppRoutes.settings: (context) => const SettingsScreen(),
+        AppRoutes.profile: (context) => const ProfileScreen(),
+        AppRoutes.eventDetail: (context) => const EventDetailScreen(),
       },
     );
   }
