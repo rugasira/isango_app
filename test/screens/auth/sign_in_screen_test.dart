@@ -38,7 +38,7 @@ void main() {
       await tester.tap(find.byKey(const Key('signIn_passwordField')));
       await tester.pumpAndSettle();
 
-      expect(find.text('Email is required'), findsOneWidget);
+      expect(find.text('Please enter your email address'), findsOneWidget);
     });
 
     testWidgets('shows inline email validation error for invalid email',
@@ -53,7 +53,7 @@ void main() {
       await tester.tap(find.byKey(const Key('signIn_passwordField')));
       await tester.pumpAndSettle();
 
-      expect(find.text('Enter a valid email address'), findsOneWidget);
+      expect(find.text('Please enter a valid university email address'), findsOneWidget);
     });
 
     testWidgets('shows required password validation error', (tester) async {

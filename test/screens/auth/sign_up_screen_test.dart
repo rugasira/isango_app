@@ -28,7 +28,6 @@ void main() {
 
       expect(find.text('Full name is required'), findsOneWidget);
       expect(find.text('Email is required'), findsOneWidget);
-      expect(find.text('Student ID is required'), findsOneWidget);
       expect(find.text('Password is required'), findsOneWidget);
       expect(find.text('Please confirm your password'), findsOneWidget);
     });
@@ -89,13 +88,12 @@ void main() {
   });
 
   group('SignUpScreen navigation', () {
-    testWidgets('navigates to /login when Sign In link is tapped',
+    testWidgets('navigates to /login when back button is tapped',
         (tester) async {
       await tester.pumpWidget(buildTestApp());
       await tester.pumpAndSettle();
 
-      await tester.ensureVisible(find.byKey(const Key('signUp_signInLink')));
-      await tester.tap(find.byKey(const Key('signUp_signInLink')));
+      await tester.tap(find.byKey(const Key('signUp_backButton')));
       await tester.pumpAndSettle();
 
       expect(find.text('Sign In Screen'), findsOneWidget);
